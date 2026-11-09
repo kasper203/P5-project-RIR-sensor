@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f3ed">
+  <title>Rep Ledger | Velocity Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="loginScreen" class="login-screen">
+    <section class="login-side">
+      <a class="brand" href="#" aria-label="Rep Ledger home">
+        <span class="brand-mark"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 14.5h3.2l2-9 3.2 9 2-5H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        REP LEDGER
+      </a>
+      <form id="loginForm" class="login-content" novalidate>
+        <div class="eyebrow">Training log / 01</div>
+        <h1>Good training starts with good data.</h1>
+        <p class="login-copy">Sign in to review the details behind every rep.</p>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+        </div>
+        <p id="loginError" class="login-error" role="alert"></p>
+        <button class="primary-button" type="submit">Sign in <span aria-hidden="true">&rarr;</span></button>
+      </form>
+      <div class="login-foot">REP LEDGER &copy; 2026</div>
+    </section>
+  </main>
+
+  <div id="dashboard" class="app-shell hidden">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Rep Ledger home">
+        <span class="brand-mark"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 14.5h3.2l2-9 3.2 9 2-5H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        REP LEDGER
+      </a>
+      <div class="nav-label">Workspace</div>
+      <div class="nav-item active" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="3" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="12" y="3" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="12" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="12" y="12" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>Sessions</div>
+      <div class="sidebar-bottom">
+        <span id="accountEmail" class="account-email"></span>
+        <button id="logoutButton" class="logout" type="button">Sign out</button>
+      </div>
+    </aside>
+    <section class="main">
+      <header class="topline">
+        <div><div class="eyebrow">Training log / overview</div><h1>Your sessions</h1></div>
+        <div class="period-tag"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="4.5" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 3v3M13.5 3v3M3 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>RECENT TRAINING</div>
+      </header>
+      <div class="section-heading"><h2>Set-by-set results</h2><span id="sessionCount"></span></div>
+      <div id="sessionList" class="session-list"></div>
+      <p class="footer-note">VELOCITY VALUES IN METERS PER SECOND</p>
+    </section>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
